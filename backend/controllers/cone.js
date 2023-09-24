@@ -29,9 +29,9 @@ const calculateConeTriangulation = (height, radius, segments) => {
     return triangulation;
   };
   
-  const editCone = (req, res, next) => {
+  const editCone = (req, res) => {
     const { height, radius, segments } = req.body;
-  
+    console.log("REQUEST MADE", height, radius, segments);
     const triangulation = calculateConeTriangulation(height, radius, segments);
   
     res.json({ triangulation });
